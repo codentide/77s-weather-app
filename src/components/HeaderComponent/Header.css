@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.5rem 10%;
+  height: 4rem;
+
+  background-color: var(--color-background-900);
+  color: var(--color-text-800);
+}
+
+.header__title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.header__title {
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.header__portfolio-url,
+.header__portfolio-url > a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--color-text-600);
+  font-weight: 400;
+
+  margin-top: 0.1rem;
+}
+
+.header__portfolio-url > a:hover {
+  color: var(--color-primary-300);
+
+  transition: color 0.2s ease;
+}
+
+.header__nav {
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  list-style: none;
+}
+
+.header__list-item {
+  padding: 0.2rem 0.4rem;
+}
+
+.header__list-item > a {
+  font-size: 1.4rem;
+  color: var(--color-text-800);
+}
+
+.header__list-item > a > .icon-github {
+  font-size: 1.2rem;
+}

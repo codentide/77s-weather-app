@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useGetWeather } from '../hooks/useGetWeather'
 
-export const App = () => {
+export const WeatherApp = () => {
   const { data, error, isLoading, fetchData } = useGetWeather()
   const [query, setQuery] = useState('')
 
