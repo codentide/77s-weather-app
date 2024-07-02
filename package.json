@@ -1,0 +1,26 @@
+{
+  "name": "77s-weather",
+  "version": "1.0.0",
+  "description": "77's Weather is an application that consumes the OpenWeatherAPI weather API to display the current weather by location. ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Marco Del Boccio",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.3.2"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}

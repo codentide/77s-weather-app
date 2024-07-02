@@ -1,0 +1,24 @@
+# Dependencias
+node_modules/
+
+# Archivos de construcción
+dist/
+
+# Informes de cobertura
+coverage/
+
+# Archivos de registro
+*.log
+
+# Archivos de entorno
+*.env
+
+# Archivos ocultos de macOS
+.DS_Store
+
+# Archivos de registro de Yarn
+yarn-error.log
+
+# Archivos de bloqueo de pnpm
+pnpm-lock.yaml
+npm-lock.json
