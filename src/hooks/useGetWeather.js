@@ -1,21 +1,26 @@
 import { useEffect, useState } from 'react'
+import { getUserCity } from '../services/getUserCity'
 
 export const useGetWeather = () => {
+  // Variables de entorno
   const apikey = import.meta.env.VITE_API_KEY
   const baseUrl = import.meta.env.VITE_BASE_URL
 
+  // Estados del fetch
   const [data, setData] = useState()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  // [ ] Que el query inicial sea la ciudad en la que se encuentra el usuario
-  const fetchData = async (query = 'Londres') => {
+  // Traer el clima según ciudad (String)
+  const fetchData = async (query) => {
     try {
+      // Validación y actualización de los estados
       if (!query) return
       setIsLoading(true)
-      // Limpiar errores
       setError(null)
+      // Inicio del fetching
       const response = await fetch(`${baseUrl}weather?q=${query}&appid=${apikey}`)
+      // Valicadión del estado de la petición
       if (!response.ok) {
         throw new Error('Error fetching data')
       }
@@ -28,8 +33,14 @@ export const useGetWeather = () => {
     }
   }
 
+  const getWeather = async () => {
+    setIsLoading(true)
+    const { city } = await getUserCity()
+    fetchData(city)
+  }
+
   useEffect(() => {
-    fetchData()
+    getWeather()
   }, [])
 
   return { data, isLoading, error, fetchData }

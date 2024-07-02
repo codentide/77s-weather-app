@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useGetWeather } from '../hooks/useGetWeather'
 
 export const App = () => {
@@ -30,18 +30,6 @@ export const App = () => {
             <li>{data.weather[0].description}</li>
           </ul>
         </div>}
-
     </main>
   )
 }
-
-/*
-  <input
-          value={form.lastName}
-          onChange={e => {
-            setForm({
-              ...form,
-              lastName: e.target.value
-            });
-          }}
-*/
